@@ -1,5 +1,5 @@
 <?php
-include "../base.php";
+
 $ToDay=date("Y-m-d");
 // dd($ToDay);
 if($Total->count(" where `date`='$ToDay' ")>0){

@@ -36,7 +36,7 @@ class DB
     // 拆解字體
     private function ArratToSql($array)
     {
-        dd($array);
+        // dd($array);
         foreach ($array as $key => $val) {
             $tmp[] = " `$key` = '$val'";
         }
@@ -146,3 +146,4 @@ $Log=new DB("log");
 $Que=new DB("que");
 $Total=new DB("total");
 $User=new DB("user");
+?>

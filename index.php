@@ -1,4 +1,8 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+﻿<?php
+include "./base.php";
+include "./api/date_see.php";
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <!-- saved from url=(0039) -->
 <html xmlns="http://www.w3.org/1999/xhtml">
 
@@ -13,8 +17,6 @@
 
 <body>
 	<?php
-	include "./base.php";
-	include "./api/date_see.php";
 	// 輸出最大值，最大max id;
 	$tol = $Total->all(" where `id`=(select max(id) from total)");
 	// 輸出最大值。
