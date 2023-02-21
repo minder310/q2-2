@@ -12,9 +12,11 @@
 </div>
 <script>
     function forget_pw(){
-        $post("/api/forget_pw.php",{email:$("#email").val()}),(a)=>{
-            console.log(a)
+        let b=$("#email").val()
+        console.log("回傳值",b)
+        $.post("./api/forget_pw_api.php",{email:b},(a)=>{
+            console.log("回傳值",a)
             $("#yaya").html(a)
-        }
+        })
     }
 </script>

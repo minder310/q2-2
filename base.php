@@ -70,6 +70,7 @@ class DB
             } else {
                 $sql=$sql." where `id`= '$id' ";
             }
+            
         return $this->db->query($sql)->fetch(PDO::FETCH_ASSOC);
     }
     // 輸入
