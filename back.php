@@ -54,7 +54,7 @@
 			</div>
 			<div class="hal" id="main">
 				<marquee style="width: 78%;" behavior="" direction="">請民眾踴躍投稿電子報!!</marquee>
-				<a href="?do=login">會員登入</a>
+				<a href="./api/log_out_api.php" class="logout">登出</a>
 				<div>
 
 					<div class="">

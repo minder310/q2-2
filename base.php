@@ -11,7 +11,7 @@ function dd($array)
 }
 // 轉跳頁面懶得寫，所以宣告一個function。
 function to($text){
-    header("location",$text);
+    header("location:".$text);
 }
 
 class DB
@@ -50,7 +50,7 @@ class DB
         $sql = "select * from $this->table ";
         if (isset($arg[0])) {
             if (is_array($arg[0])) {
-                $tmp = $this->ArratToSql($arg);
+                $tmp = $this->ArratToSql($arg[0]);
                 $sql=$sql." where ".join(" && ",$tmp);
             } else {
                 $sql=$sql.$arg[0];
