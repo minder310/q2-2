@@ -44,7 +44,7 @@
                     console.log("b", b);
                     if (parseInt(b) === 1) {
                         if (user.acc === "admin") {
-                            location.href = "back.php"
+                            location.href = "index.php"
                         }else{
                             location.href = "index.php"
                         }

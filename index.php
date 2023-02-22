@@ -55,7 +55,20 @@ include "./api/date_see.php";
 			</div>
 			<div class="hal" id="main">
 				<marquee style="width: 78%;" behavior="" direction="">請民眾踴躍投稿電子報!!</marquee>
+				<?php
+				if(isset($_SESSION['login'])){ 
+					if($_SESSION['login']=="admin"){
+					?>
+					<a href="./back.php">管理</a>|
+					<a href="./api/log_out_api.php" class="logout">登出</a>
+					<?php }else{ ?>
+					<a href=""></a>
+					<?php } ?>
+			<?php }else{ ?>
 				<a href="?do=login">會員登入</a>
+				<?php
+				}
+				?>
 				<div>
 
 					<div class="">

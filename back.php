@@ -46,11 +46,11 @@
 		</style>
 		<div id="mm">
 			<div class="hal" id="lef">
-				<a class="blo" href="?do=po">分類網誌</a>
-				<a class="blo" href="?do=news">最新文章</a>
-				<a class="blo" href="?do=pop">人氣文章</a>
-				<a class="blo" href="?do=know">講座訊息</a>
-				<a class="blo" href="?do=que">問卷調查</a>
+				<a class="blo" href="?do=po">帳號管理</a>
+				<a class="blo" href="?do=news">分類網誌</a>
+				<a class="blo" href="?do=pop">最新文章管理</a>
+				<a class="blo" href="?do=know">講座管理</a>
+				<a class="blo" href="?do=que">問卷管理</a>
 			</div>
 			<div class="hal" id="main">
 				<marquee style="width: 78%;" behavior="" direction="">請民眾踴躍投稿電子報!!</marquee>
@@ -60,11 +60,11 @@
 					<div class="">
 					<?php
 						$do=$_GET['do'];
-						$file="./front/".$do.".php";
+						$file="./back/".$do.".php";
 						if(file_exists($file)){
-							include "./front/$do.php";
+							include "./back/$do.php";
 						}else{
-							include "./front/home.php";
+							include "./back/home.php";
 						}
 						?>
 					</div>
