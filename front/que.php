@@ -17,7 +17,7 @@
         <tr>
             <td><?= $quekey['id']?></td>
             <td><?= $quekey['text']?>]</td>
-            <td><?= $Que->sum("parent"," where `parent` = '$quekey[id]'")?></td>
+            <td><?= $Que->sum("count"," where `parent` = '$quekey[id]'")?></td>
             <td>
                 <a href="index.php?do=look_que_ove&p=<?=$quekey['id']?>">投票結果頁面</a>
             </td>

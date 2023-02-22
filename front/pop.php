@@ -9,10 +9,6 @@
         padding: 1rem;
         overflow: auto;
     }
-    .new-title{
-        
-        
-    }
 </style>
 <fieldset>
     <legend>目前位置:首頁>人氣文章</legend>
@@ -26,7 +22,7 @@
     $start = ($now - 1) * $div;
 
     $news = $News->all(['sh' => 1], " limit $start,$div")
-    
+
     ?>
     <table>
         <tr>
@@ -41,8 +37,8 @@
                 <td class="new-title">
                     <?= $new['title'] ?>
                     <div class="full">
-                        <h3 style="color: skyblue;"><?=$new['title']?></h3>
-                        <span><?=$new['text']?></span>
+                        <h3 style="color: skyblue;"><?= $new['title'] ?></h3>
+                        <span><?= $new['text'] ?></span>
                     </div>
                 </td>
                 <td><?= mb_substr($new['text'], 0, 20) ?>...
@@ -50,8 +46,8 @@
                 <td>
                     <div>
                         <!-- 取出讚的數量 -->
-                        <?= $new['good']?>個人說讚
-                        <a href=""  class="goods" data-id="<?=$new['id']?>" data-user=<?=$_SESSION['login']?>>
+                        <?= $new['good'] ?>個人說讚
+                        <a href="" class="goods" data-id="<?= $new['id'] ?>" data-user=<?= $_SESSION['login'] ?>>
                             <img src="./icon/02B03.jpg" alt="" style="width: 20px;hight:20px">
                         </a>
                     </div>
@@ -83,10 +79,10 @@
 
 <script>
     $(".new-title").hover(
-        function(){
+        function() {
             $(this).children(".full").show();
         },
-        function(){
+        function() {
             $(this).children(".full").hide();
         }
     )
