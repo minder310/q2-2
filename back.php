@@ -58,15 +58,14 @@
 				<div>
 
 					<div class="">
-						<?php
-						if(!isset($_GET)){
-							include "./front/po.php";
-						}else{
-							$do=$_GET['do'];
+					<?php
+						$do=$_GET['do'];
+						$file="./front/".$do.".php";
+						if(file_exists($file)){
 							include "./front/$do.php";
-							
+						}else{
+							include "./front/home.php";
 						}
-						
 						?>
 					</div>
 				</div>

@@ -11,6 +11,7 @@
     }
     .new-title{
         
+        
     }
 </style>
 <fieldset>
@@ -25,6 +26,7 @@
     $start = ($now - 1) * $div;
 
     $news = $News->all(['sh' => 1], " limit $start,$div")
+    
     ?>
     <table>
         <tr>
@@ -47,7 +49,11 @@
                 </td>
                 <td>
                     <div>
-                        <img src="../icon/02B03.jpg" alt="">
+                        <!-- 取出讚的數量 -->
+                        <?= $new['good']?>個人說讚
+                        <a href=""  class="goods" data-id="<?=$new['id']?>" data-user=<?=$_SESSION['login']?>>
+                            <img src="./icon/02B03.jpg" alt="" style="width: 20px;hight:20px">
+                        </a>
                     </div>
                 </td>
             </tr>
@@ -76,12 +82,12 @@
 </fieldset>
 
 <script>
-    $(".full").hover(
+    $(".new-title").hover(
         function(){
-            $(this).show();
+            $(this).children(".full").show();
         },
         function(){
-            $(this).hide();
+            $(this).children(".full").hide();
         }
     )
 </script>

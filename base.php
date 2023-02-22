@@ -122,7 +122,7 @@ class DB
         if(isset($arg[1])){
             $sql=$sql.$arg[1];
         }
-        // dd($sql);
+        //  dd($sql);
         return $this->db->query($sql)->fetchColumn();
     }
     public function count(...$arg){
