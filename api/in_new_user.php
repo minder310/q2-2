@@ -2,6 +2,7 @@
     include_once "../base.php";
     // dd($_POST);
     $acc=$_POST['acc'];
+    unset($_POST['pw2']);
     // 確認帳號是否有重複。
     $user=$User->count(["acc"=>$acc]);
     if($user>0){
