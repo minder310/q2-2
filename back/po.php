@@ -80,5 +80,5 @@ $user = $User->all();
                 })
             }
         }
-    }
+    };
 </script>

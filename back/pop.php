@@ -1,6 +1,6 @@
 最新文章管理
 
-<form action="">
+<form action="./api/chang_del_news.php" method="POST">
     <table>
 
         <tr>
@@ -16,8 +16,8 @@
             <tr>
                 <td><?= $key['id'] ?></td>
                 <td><?= $key['title'] ?></td>
-                <td><input type="checkbox" name="sh[]" id="sh" value="<?= $key['id'] ?>"></td>
-                <td><input type="checkbox" name="del[]" id="sh" value="<?= $key['id'] ?>"></td>
+                <td><input type="checkbox" name="sh[]" id="sh" value="<?= $key['id'] ?> " <?php if($key['sh']==1){echo 'checked';} ?>></td>
+                <td><input type="checkbox" name="del[]" id="del" value="<?= $key['id'] ?>"></td>
             </tr>
         <?php } ?>
     </table>

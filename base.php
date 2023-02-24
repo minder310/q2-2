@@ -87,7 +87,7 @@ class DB
             $key=array_keys($data);
             $sql="insert into `$this->table` (`".join("`,`",$key)."`) values ('".join("','",$data)."')";
         }
-
+        // dd($sql);
         return $this->db->exec($sql);
     }
     // 刪除
