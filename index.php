@@ -73,7 +73,7 @@ include "./api/date_see.php";
 
 					<div class="">
 						<?php
-						$do=$_GET['do'];
+						(isset($_GET['do']))?$do=$_GET['do']:$do="home";
 						$file="./front/".$do.".php";
 						if(file_exists($file)){
 							include "./front/$do.php";

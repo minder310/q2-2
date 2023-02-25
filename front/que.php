@@ -23,7 +23,7 @@
             </td>
             <td>
                 <?php
-                echo ($_SESSION['login'])?"<a href='index.php?do=inque&p=$quekey[id]'>投票</a>":"<a href='index.php?do=login'>請先登錄</a>";
+                echo (isset($_SESSION['login']))?"<a href='index.php?do=inque&p=$quekey[id]'>投票</a>":"<a href='index.php?do=login'>請先登錄</a>";
                 ?>
             </td>
         </tr>

@@ -59,7 +59,7 @@
 
 					<div class="">
 					<?php
-						$do=$_GET['do'];
+						(isset($_GET['do']))?$do=$_GET['do']:$do="home";
 						$file="./back/".$do.".php";
 						if(file_exists($file)){
 							include "./back/$do.php";

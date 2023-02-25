@@ -12,14 +12,20 @@
 <fieldset>
     <legend>目前位置:首頁 > 最新文章</legend>
     <?php
+    // 顯示所有要顯示的文章數量。
     $all = $News->all(['sh' => 1]);
+    // 要除以每篇要險式的數量。
     $div = 5;
+    // 取最後的key值，並且+1為總篇數。
     $last_key = array_key_last($all) + 1;
+    // 總篇數除以每頁要顯示的數量，並且以整數顯示。
     $pages = ceil($last_key / $div);
+    // 現在顯示的頁面。
     $now = $_GET['p'] ?? 1;
     // if(isset)的縮寫。
+    // 為顯示篇數的起始點。
     $start = ($now - 1) * $div;
-
+    
     $news = $News->all(['sh' => 1], " limit $start,$div")
     ?>
     <table>
