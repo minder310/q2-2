@@ -48,7 +48,7 @@
                         <!-- 取出讚的數量 -->
                         <?= $new['good'] ?>個人說讚
                         <a href="" class="goods" data-id="<?= $new['id'] ?>" data-user=<?= $_SESSION['login'] ?>>
-                            <img src="./icon/02B03.jpg" alt="" style="width: 20px;hight:20px">
+                            <img src="./icon/02B03.jpg" alt="" style="width: 20px;height:20px">
                         </a>
                     </div>
                 </td>
